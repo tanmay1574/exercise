@@ -69,3 +69,14 @@ db.restaurants.find(
 "cuisine" :1
 }
 );
+Write a MongoDB query to arranged the name of the cuisine in ascending order and for that same cuisine borough should be in descending order. 
+db.restaurants.find().sort(
+                           {"cuisine":1,"borough" : -1,}
+                          );
+Write a MongoDB query to know whether all the addresses contains the street or not.
+db.restaurants.find(
+                     {"address.street" : 
+                         { $exists : true } 
+                     } 
+                   );
+
